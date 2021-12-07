@@ -1,4 +1,4 @@
-package ae.solidbase.interview.user.projection;
+package ae.solidbase.interview.user.hateoasModel;
 
 import ae.solidbase.interview.user.model.User;
 import lombok.Getter;
