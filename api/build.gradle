@@ -27,6 +27,7 @@ dependencies {
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
     implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.13'
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-webmvc-core', version: '1.5.13'
     implementation group: 'org.springdoc', name: 'springdoc-openapi-hateoas', version: '1.5.13'
     implementation group: 'org.springdoc', name: 'springdoc-openapi-data-rest', version: '1.5.13'
 
