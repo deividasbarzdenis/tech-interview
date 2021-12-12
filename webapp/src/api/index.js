@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const HTTP = axios.create({
-    baseURL: '/api/1.0'
+    baseURL: '/api'
 })
 
 export { HTTP as default }

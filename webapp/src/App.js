@@ -1,24 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import {Container, createTheme, CssBaseline, makeStyles, ThemeProvider} from "@material-ui/core";
+import {BrowserRouter as Router} from "react-router-dom";
+import Header from "./components/Header/Header";
+import Content from "./components/Content/Content";
+import Footer from "./components/Footer/Footer";
+import { blueGrey } from "@material-ui/core/colors";
+import cover from './assets/cover.jpg'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#fefefe'
+    },
+    secondary: blueGrey,
+  },
+  typography: {
+    fontFamily: 'Quicksand',
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  }
+})
+
+const useStyles = makeStyles({
+  root: {
+    //minHeight: '100vh',
+    //position: "absolute",
+    top: 0,
+    right: 0,
+    //height: "100%",
+    width: "100%",
+    backgroundImage: `url(${process.env.PUBLIC_URL + cover})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  },
+  main: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
+  }
+})
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ThemeProvider theme={theme}>
+        <div className={classes.root}>
+          <Router>
+            <CssBaseline/>
+            <Header/>
+            <Container component="main" className={classes.main}>
+              <Content/>
+            </Container>
+            <Footer/>
+          </Router>
+        </div>
+      </ThemeProvider>
   );
 }
 
