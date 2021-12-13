@@ -1,14 +1,18 @@
-# Tech interview 
-
-## Tech stack
-For the project the following stack provided:
-
+# 1. Introduction
+   This is a Spring framework and React.js made User Management API Web Service. Main works include:
+   Used Spring framework to support "User Management API" search, listing, update, delete and more 
+   (dependency injection, inversion of control, HATEOAS, REST API, etc.). Utilized Hibernate, 
+   Spring JPA to provide better support of database operations. React.js app includes simple components 
+   with user table, user search and create user form. 
 Back-end:
 * Spring Boot 
 * Hibernate
 * JPA
 * Lombok
 * H2 database
+* Spring data rest
+* Spring hateoas
+* Swagger
 
 Front-end:
 
@@ -19,31 +23,25 @@ Front-end:
 * Formik (feel free to replace with preferred lib)
 * Yup (for form validation)
 * react-router-dom library for routing
+* Material UI for styling
 
+## 2. Documentation API (Swagger) by accessing
+- `http://localhost:9090/swagger-ui.html`
 
-## Task
+All end-points are created automatically by Spring data rest and one custom end point. 
+Spring app Endpoint:
+![img.png](img.png)
 
-You need to create a page(s), where the user can create users, edit them, select one and delete. You need to create 
-both, front-end and back-end and have this functionality as a functional unit. If you are more focused to front-end
-please make front-end functionality as nice as possible (e.g. cover with tests, make it responsive etc). On the other hand, 
-if you are back-end focused, do the same with Spring (e.g. implement model mappers).
-
-For easier start, we created user entity and seeded it (using faker) to H2 database, so you already have some users 
-that you can fetch from the database.
-
-- You need to create a table and list all users
-- Add a page, where the user can be created
-- Add a page where the user can be updated
-- Make a button (maybe with alert dialog?) to delete a user
-- Make it possible to view a single user (e.g. modal or another page)
-
-### Minimum functionality
-
-- Functioning API
-- Usable front-end
-
-### Bonus points
-- Unit tests
-- Documentation (e.g. Swagger, JavaDoc)
-- Search functionality (or filtering)
-- Usage of prop-types
+### React.js app functionality
+Run React app
+~~~~
+npm install
+npm start
+~~~~
+Frontend URLFrontend URL
+~~~~
+http://localhost:3000/
+~~~~
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
